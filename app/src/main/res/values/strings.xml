@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Permissions</string>
+
+    <string name="location_permission_title">Need Location Access</string>
+    <string name="location_permission_desc">Please grant location permission to continue searching for restaurants.</string>
+    <string name="location_permission_never_ask_again">Location permission was permanently disabled. Please grant location permission from settings</string>
+
+    <string name="gps_permission_title">Need GPS Access</string>
+    <string name="gps_permission_desc">Please enable GPS to continue searching for restaurants.</string>
+
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="allow">Allow</string>
+    <string name="decline">Decline</string>
+</resources>
