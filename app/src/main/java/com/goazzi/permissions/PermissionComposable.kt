@@ -31,6 +31,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
@@ -258,22 +259,22 @@ fun PermissionDialogStateless(
     }
 
 //    if (shouldShowDialog) {
-        Dialog(
-            properties = DialogProperties(
-                usePlatformDefaultWidth = false,
-                dismissOnBackPress = false,
-                dismissOnClickOutside = false
-            ), onDismissRequest = {
-                TAG.d(message = "onDismissRequest")
-            }) {
-            PermissionDialogUI(
-                title = title,
-                desc = desc,
-                onYesClick = onAgreeClick,
-                onNoClick = onDeclineClick,
-                modifier = modifier
-            )
-        }
+    Dialog(
+        properties = DialogProperties(
+            usePlatformDefaultWidth = false,
+            dismissOnBackPress = false,
+            dismissOnClickOutside = false
+        ), onDismissRequest = {
+            TAG.d(message = "onDismissRequest")
+        }) {
+        PermissionDialogUI(
+            title = title,
+            desc = desc,
+            onYesClick = onAgreeClick,
+            onNoClick = onDeclineClick,
+            modifier = modifier
+        )
+    }
 //    }
 }
 
@@ -313,6 +314,7 @@ fun PermissionDialogUI(
             Image(
                 painter = painterResource(id = R.drawable.ic_location),
                 contentDescription = null,
+                colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onSurface),
                 contentScale = ContentScale.FillBounds,
                 modifier = Modifier
                     .size(100.dp)
